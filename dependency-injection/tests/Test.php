@@ -2,7 +2,7 @@
 
 use CatalogOfPhpPatterns\DependencyInjection\Container;
 use CatalogOfPhpPatterns\DependencyInjection\tests\Services\ServiceBar;
-use CatalogOfPhpPatterns\DependencyInjection\tests\Services\ServiceOne;
+use CatalogOfPhpPatterns\DependencyInjection\tests\Services\ServiceFoo;
 
 /**
  * Class Test
@@ -13,8 +13,8 @@ class Test extends PHPUnit_Framework_TestCase
     {
         $container = new Container();
 
-        $container->register(ServiceOne::class, ServiceOne::class);
+        $container->register(ServiceFoo::class, ServiceFoo::class);
         $container->register(ServiceBar::class, ServiceBar::class);
-        $container->resolve(ServiceOne::class);
+        $container->resolve(ServiceFoo::class);
     }
 }
