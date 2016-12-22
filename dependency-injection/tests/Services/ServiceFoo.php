@@ -6,7 +6,7 @@ namespace CatalogOfPhpPatterns\DependencyInjection\tests\Services;
  * Class ServiceOne
  * @package CatalogOfPhpPatterns\DependencyInjection\tests\Services
  */
-class ServiceOne
+class ServiceFoo
 {
     /**
      * ServiceOne constructor

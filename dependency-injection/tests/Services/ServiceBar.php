@@ -11,7 +11,7 @@ class ServiceBar
     /**
      * ServiceBar constructor
      *
-     * @param ServiceBar $service
+     * @param ServiceFoo $service
      */
-    function __construct(ServiceBar $service) {	}
+    function __construct(ServiceFoo $service) {	}
 }

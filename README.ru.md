@@ -5,6 +5,7 @@
 
 - Registry
 - Service Layer
+- Dependency Injection
 - Front Controller
 - Application Controller
 - ...
