@@ -1,0 +1,17 @@
+{
+    "name": "ksv/catalog-of-php-patterns",
+    "description": "Catalog of popular patterns in PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ksv",
+            "email": "kurpachsv@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^5.5"
+    },
+    "autoload": {
+        "psr-0": {"dependency-injection": "src/"},
+    }
+}
