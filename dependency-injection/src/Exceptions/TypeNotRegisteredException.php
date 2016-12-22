@@ -2,6 +2,8 @@
 
 namespace CatalogOfPhpPatterns\DependencyInjection\Exceptions;
 
-class TypeNotRegisteredException extends \Exception
-{
-}
+/**
+ * Class TypeNotRegisteredException
+ * @package CatalogOfPhpPatterns\DependencyInjection\Exceptions
+ */
+class TypeNotRegisteredException extends \Exception { }
