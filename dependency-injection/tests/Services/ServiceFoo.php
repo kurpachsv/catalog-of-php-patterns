@@ -3,7 +3,7 @@
 namespace CatalogOfPhpPatterns\DependencyInjection\tests\Services;
 
 /**
- * Class ServiceOne
+ * Class ServiceFoo
  * @package CatalogOfPhpPatterns\DependencyInjection\tests\Services
  */
 class ServiceFoo

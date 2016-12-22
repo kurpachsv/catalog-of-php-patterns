@@ -3,7 +3,7 @@
 namespace CatalogOfPhpPatterns\DependencyInjection\tests\Services;
 
 /**
- * Class ServiceTwo
+ * Class ServiceBar
  * @package CatalogOfPhpPatterns\DependencyInjection\tests\Services
  */
 class ServiceBar
