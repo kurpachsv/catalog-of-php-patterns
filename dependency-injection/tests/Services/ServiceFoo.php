@@ -1,10 +1,10 @@
 <?php
 
-namespace CatalogOfPhpPatterns\DependencyInjection\tests\Services;
+namespace CatalogOfPhpPatterns\DependencyInjection\Tests\Services;
 
 /**
  * Class ServiceFoo
- * @package CatalogOfPhpPatterns\DependencyInjection\tests\Services
+ * @package CatalogOfPhpPatterns\DependencyInjection\Tests\Services
  */
 class ServiceFoo
 {

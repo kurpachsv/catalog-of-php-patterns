@@ -1,17 +1,15 @@
 <?php
 
-namespace CatalogOfPhpPatterns\DependencyInjection\tests\Services;
+namespace CatalogOfPhpPatterns\DependencyInjection\Tests\Services;
 
 /**
  * Class ServiceBar
- * @package CatalogOfPhpPatterns\DependencyInjection\tests\Services
+ * @package CatalogOfPhpPatterns\DependencyInjection\Tests\Services
  */
 class ServiceBar
 {
     /**
      * ServiceBar constructor
-     *
-     * @param ServiceFoo $service
      */
-    function __construct(ServiceFoo $service) {	}
+    function __construct() { }
 }

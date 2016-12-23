@@ -1,13 +1,13 @@
 <?php
 
 use CatalogOfPhpPatterns\DependencyInjection\Container;
-use CatalogOfPhpPatterns\DependencyInjection\tests\Services\ServiceBar;
-use CatalogOfPhpPatterns\DependencyInjection\tests\Services\ServiceFoo;
+use CatalogOfPhpPatterns\DependencyInjection\Tests\Services\ServiceBar;
+use CatalogOfPhpPatterns\DependencyInjection\Tests\Services\ServiceFoo;
 
 /**
- * Class Test
+ * Class ResolvingTest
  */
-class Test extends PHPUnit_Framework_TestCase
+class ResolvingTest extends PHPUnit_Framework_TestCase
 {
     public function test_Correct_ResolveTypeWithCtor()
     {
@@ -15,6 +15,8 @@ class Test extends PHPUnit_Framework_TestCase
 
         $container->register(ServiceFoo::class, ServiceFoo::class);
         $container->register(ServiceBar::class, ServiceBar::class);
+
         $container->resolve(ServiceFoo::class);
+        $container->resolve(ServiceBar::class);
     }
 }
