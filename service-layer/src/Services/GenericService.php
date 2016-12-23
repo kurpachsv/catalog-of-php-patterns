@@ -7,10 +7,10 @@
  * Time: 15:53
  */
 
-namespace CatalogOfPhpPatterns\Services;
+namespace CatalogOfPhpPatterns\ServiceLayer\Services;
 
 /**
  * Class GenericService
- * @package CatalogOfPhpPatterns\Services
+ * @package CatalogOfPhpPatterns\ServiceLayer\Services
  */
 abstract class GenericService { }

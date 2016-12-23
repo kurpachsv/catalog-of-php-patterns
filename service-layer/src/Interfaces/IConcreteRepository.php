@@ -7,26 +7,21 @@
  * Time: 16:05
  */
 
-namespace CatalogOfPhpPatterns\Interfaces;
+namespace CatalogOfPhpPatterns\ServiceLayer\Interfaces;
 
 /**
  * Interface IConcreteRepository
- * @package CatalogOfPhpPatterns\Interfaces
+ * @package CatalogOfPhpPatterns\ServiceLayer\Interfaces
  */
 interface IConcreteRepository
 {
     /**
-     * @return void
+     * @return string
      */
     function foo();
 
     /**
-     * @return void
+     * @return string
      */
     function bar();
-
-    /**
-     * @return void
-     */
-    function baz();
 }

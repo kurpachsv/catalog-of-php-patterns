@@ -14,7 +14,8 @@
     "autoload": {
         "psr-4": {
             "CatalogOfPhpPatterns\\DependencyInjection\\": "./dependency-injection/src/",
-            "CatalogOfPhpPatterns\\DependencyInjection\\Tests\\": "./dependency-injection/tests/"
+            "CatalogOfPhpPatterns\\DependencyInjection\\Tests\\": "./dependency-injection/tests/",
+            "CatalogOfPhpPatterns\\ServiceLayer\\": "./service-layer/src"
         }
     }
 }

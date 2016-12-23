@@ -7,10 +7,10 @@
  * Time: 15:44
  */
 
-namespace CatalogOfPhpPatterns\Exceptions;
+namespace CatalogOfPhpPatterns\ServiceLayer\Exceptions;
 
 /**
  * Class ServiceException
- * @package CatalogOfPhpPatterns\Exceptions
+ * @package CatalogOfPhpPatterns\ServiceLayer\Exceptions
  */
 class ServiceException extends \Exception { }

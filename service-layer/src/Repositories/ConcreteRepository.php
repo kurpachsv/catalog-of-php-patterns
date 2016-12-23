@@ -7,34 +7,29 @@
  * Time: 16:02
  */
 
-namespace CatalogOfPhpPatterns\Repositories;
+namespace CatalogOfPhpPatterns\ServiceLayer\Repositories;
 
-use CatalogOfPhpPatterns\Interfaces\IConcreteRepository;
+use CatalogOfPhpPatterns\ServiceLayer\Interfaces\IConcreteRepository;
 
 /**
  * Class ConcreteRepository
- * @package CatalogOfPhpPatterns\Reposities
+ * @package CatalogOfPhpPatterns\ServiceLayer\Repositories
  */
 class ConcreteRepository extends GenericRepository implements IConcreteRepository
 {
     /**
-     * @return void
+     * @return string
      */
     public function foo()
     {
+        return 'Hello';
     }
 
     /**
-     * @return void
+     * @return string
      */
     public function bar()
     {
-    }
-
-    /**
-     * @return void
-     */
-    public function baz()
-    {
+        return "World";
     }
 }

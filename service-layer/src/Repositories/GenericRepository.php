@@ -7,10 +7,10 @@
  * Time: 15:54
  */
 
-namespace CatalogOfPhpPatterns\Repositories;
+namespace CatalogOfPhpPatterns\ServiceLayer\Repositories;
 
 /**
  * Class GenericRepository
- * @package CatalogOfPhpPatterns\Repositories
+ * @package CatalogOfPhpPatterns\ServiceLayer\Repositories
  */
 abstract class GenericRepository { }

@@ -7,10 +7,10 @@
  * Time: 15:47
  */
 
-namespace CatalogOfPhpPatterns\Exceptions;
+namespace CatalogOfPhpPatterns\ServiceLayer\Exceptions;
 
 /**
  * Class HelperException
- * @package CatalogOfPhpPatterns\Exceptions
+ * @package CatalogOfPhpPatterns\ServiceLayer\Exceptions
  */
 class HelperException extends \Exception { }

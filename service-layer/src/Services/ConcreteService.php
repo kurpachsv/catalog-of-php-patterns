@@ -7,13 +7,13 @@
  * Time: 16:04
  */
 
-namespace CatalogOfPhpPatterns\Services;
+namespace CatalogOfPhpPatterns\ServiceLayer\Services;
 
-use CatalogOfPhpPatterns\Interfaces\IConcreteRepository;
+use CatalogOfPhpPatterns\ServiceLayer\Interfaces\IConcreteRepository;
 
 /**
  * Class ConcreteService
- * @package CatalogOfPhpPatterns\Services
+ * @package CatalogOfPhpPatterns\ServiceLayer\Services
  */
 class ConcreteService extends GenericService
 {
@@ -29,5 +29,13 @@ class ConcreteService extends GenericService
     public function __construct(IConcreteRepository $repository)
     {
         $this->repository = $repository;
+    }
+
+    /**
+     * @return string
+     */
+    public function helloWorld()
+    {
+        return sprintf("%s, %s!", $this->repository->foo(), $this->repository->bar());
     }
 }

@@ -7,10 +7,10 @@
  * Time: 15:46
  */
 
-namespace CatalogOfPhpPatterns\Exceptions;
+namespace CatalogOfPhpPatterns\ServiceLayer\Exceptions;
 
 /**
  * Class RepositoryException
- * @package CatalogOfPhpPatterns\Exceptions
+ * @package CatalogOfPhpPatterns\ServiceLayer\Exceptions
  */
 class RepositoryException extends \Exception { }

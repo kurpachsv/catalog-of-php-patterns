@@ -7,37 +7,25 @@
  * Time: 15:47
  */
 
-namespace CatalogOfPhpPatterns\Helpers;
+namespace CatalogOfPhpPatterns\ServiceLayer\Helpers;
 
-use CatalogOfPhpPatterns\Exceptions\HelperException;
+use CatalogOfPhpPatterns\ServiceLayer\Exceptions\HelperException;
 
 /**
  * Class ServiceFactoryHelper
- * @package CatalogOfPhpPatterns\Helpers
- *
- * Usage:
- * $service = ServiceFactoryHelper::create(ConcreteService::class);
+ * @package CatalogOfPhpPatterns\ServiceLayer\Helpers
  */
 class ServiceFactoryHelper
 {
     /**
      * @var string
      */
-    protected static $root = 'service-layer';
+    protected static $serviceNamePattern = "#{{root}}\\\\Services\\\\([A-z_]+)Service#";
 
     /**
      * @var string
      */
-    protected static $serviceNamePattern = null;
-
-    /**
-     * ServiceFactoryHelper constructor
-     */
-    protected function __construct()
-    {
-        $root = self::$root;
-        self::$serviceNamePattern = "#{$root}\\\\Services\\\\([A-z_]+)Service#";
-    }
+    protected static $repositoryClassNamePattern = "{{root}}\\Repositories\\{{base}}Repository";
 
     /**
      * @param $serviceClassName
@@ -50,16 +38,24 @@ class ServiceFactoryHelper
             throw new HelperException('Service name cannot be empty.');
         }
 
-        if (preg_match(self::$serviceNamePattern, $serviceClassName) === false) {
+        $root = str_replace('\\Helpers', '', __NAMESPACE__);
+
+        $serviceNamePattern = strtr(self::$serviceNamePattern, [
+            '{{root}}' => str_replace('\\', '\\\\', $root)
+        ]);
+
+        if (preg_match($serviceNamePattern, $serviceClassName) === false) {
             throw new HelperException("Wrong service name: {$serviceClassName}. Cannot create service.");
         }
 
-        $root = self::$root;
         $matches = [];
-        preg_match(self::$serviceNamePattern, $serviceClassName, $matches);
+        preg_match($serviceNamePattern, $serviceClassName, $matches);
 
         $base = $matches[1];
-        $repositoryClassName = "{$root}\\Repositories\\{$base}Repository";
+        $repositoryClassName = strtr(self::$repositoryClassNamePattern, [
+            '{{root}}' => $root,
+            '{{base}}' => $base
+        ]);
 
         try {
             $repository = new $repositoryClassName;
